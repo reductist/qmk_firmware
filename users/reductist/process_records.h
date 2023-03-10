@@ -2,9 +2,8 @@
 #include "reductist.h"
 
 enum custom_keycodes {
-  M_PSCR = SAFE_RANGE,
   // Secret Macros
-  S_XXX1,
+  S_XXX1 = SAFE_RANGE,
   S_XXX2,
   S_XXX3,
   S_XXX4,

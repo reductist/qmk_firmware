@@ -1,4 +1,6 @@
-SRC += reductist.h \
+EXTRAKEY_ENABLE = yes
+
+SRC += reductist.c \
 	   process_records.c \
 	   encoder.c
 

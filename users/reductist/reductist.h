@@ -1,4 +1,3 @@
-#pragma once
 #include "quantum.h"
 #include "process_records.h"
 
@@ -18,4 +17,4 @@ uint16_t encoder_rotated_timer;
 #define MO_FNS MO(_FNS)
 
 // Shortcut keys
-#define M_PSCR LGUI(LSFT(KC_4))
+#define M_PSCR LSG(KC_4)
