@@ -1,0 +1,17 @@
+#pragma once
+
+#include QMK_KEYBOARD_H
+
+#define WIN_WS_L LCTL(LGUI(KC_LEFT))
+#define WIN_WS_R LCTL(LGUI(KC_RIGHT))
+#define WIN_WS_OVW LGUI(KC_TAB)
+#define WIN_ALTTAB LALT(KC_TAB)
+
+#define MAC_WS_L LCTL(KC_LEFT)
+#define MAC_WS_R LCTL(KC_RIGHT)
+#define MAC_WS_OVW LCTL(KC_UP)
+#define MAC_ALTTAB LGUI(KC_GRAVE)
+#define MAC_GBS LGUI(KC_BSPC)
+#define MAC_GDEL LGUI(KC_DEL)
+#define MAC_GLT LGUI(KC_LEFT)
+#define MAC_GRT LGUI(KC_RIGHT)
