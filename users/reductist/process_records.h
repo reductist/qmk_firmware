@@ -2,12 +2,14 @@
 #include "reductist.h"
 
 enum custom_keycodes {
-  // Secret Macros
+  // Secret macros
   S_XXX1 = SAFE_RANGE,
   S_XXX2,
   S_XXX3,
   S_XXX4,
   S_XXX5,
+  // Feature macros
+  JIGGL
 };
 
 bool process_record_secrets(uint16_t keycode, keyrecord_t *record);
