@@ -1,4 +1,5 @@
 EXTRAKEY_ENABLE = yes
+DEFERRED_EXEC_ENABLE = yes
 
 SRC += reductist.c \
 	   process_records.c \
