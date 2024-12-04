@@ -14,14 +14,14 @@ __attribute__((weak)) bool process_record_oled(uint16_t keycode, keyrecord_t *re
 }
 #endif
 
-uint32_t idle_timeout   = 90000; // (after 90s)
-uint32_t mouse_interval = 30000; // (every 30s)
-bool     idle_enabled   = true;
+uint32_t idle_timeout   = 60000; // (after 60s)
+uint32_t mouse_interval = 20000; // (every 20s)
+bool     idle_enabled   = false; // initially disabled
 
 static uint32_t idle_callback(uint32_t trigger_time, void *cb_arg) {
     // now idle
     if (idle_enabled) {
-        SEND_STRING(SS_TAP(X_F15));
+        tap_code16(KC_F15);
     }
     return mouse_interval;
 }
@@ -39,6 +39,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case JIGGL:
             if (record->event.pressed) {
                 idle_enabled = !idle_enabled;
+                if (idle_enabled) {
+                    rgb_matrix_enable_noeeprom();
+                    rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
+                    rgb_matrix_sethsv_noeeprom(HSV_CORAL);
+                } else {
+                    rgb_matrix_disable_noeeprom();
+                }
             }
             break;
     }
